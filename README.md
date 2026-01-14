@@ -9,20 +9,29 @@ using SQL, with further processing planned using Python and Excel.
 
 ## Dataset
 - Brazilian E-Commerce Public Dataset from kaggle
+- There are 8 different CSV files in one folder that are liked to one or another.
+- Following are the names of those files
+  olist_customers_dataset
+  olist_geolocation_dataset
+  olist_order_items_dataset
+  olist_order_payments_dataset
+  olist_order_reviews_dataset
+  olist_orders_dataset
+  olist_products_dataset
+  olist_sellers_dataset
 
 ## Tools & Technologies
 - SQL (MySQL)
 - DBeaver (SQL Client)
 
-## Initial Data Exploration
-
-The first phase of the project involved setting up the database and
-performing initial exploratory queries to understand the structure
-and size of the data.
-
 ### Database Setup
 - Imported customer and order datasets into a MySQL database
 - Verified successful data import and table accessibility
+
+## Initial Data Exploration
+The first phase of the project involved setting up the database and
+performing initial exploratory queries to understand the structure
+and size of the data.
 
 ### Exploratory Analysis
 The following exploratory checks were performed:
@@ -30,10 +39,26 @@ The following exploratory checks were performed:
 - Counted total number of orders
 - Executed basic `SELECT` queries to inspect table structure and sample records
 
+###**Table Structure**
+Table         Total_Rows
+customers	    99441
+geolocation	  1000163
+Order Items 	112650
+Order Payment	103886
+Order Reviews	77916
+Orders	      99441
+Products    	32951
+Sellers     	3095
+
 **Key Findings:**
-- Total customers: 96,069
+
+- Customers: 96,069
 - Total customers records: 99,441
 - Total orders: 99,441
+- Even though there are one million record of geolocation table, that is an expected number because same zip code can appear many times with distinct latitude and longitude values
+- The product ID itself is unique per product. The product is repeated in transactional tables.This is expected behavior, not a data quality issue (Product_id > Distinct_product_id)
+- Fortunately 77 % is the satisfaction rate among customers
+  
 ### Customer Uniqueness Validation
 
 However, only 96,069 distinct `customer_unique_id`values were identified.
@@ -44,8 +69,15 @@ and therefore be associated with multiple system-generated customer IDs.
 These checks confirmed that the data was correctly loaded and ready
 for further data quality validation.
 
-## Next Steps
-- Identify NULL values in key columns
-- Detect duplicate records
-- Validate primary and foreign key relationships
-- Perform consistency checks across related tables
+### Checking for nulls in every table
+- Customer_id         null_values = 0
+- Orders_id           null_values = 0
+-customer_unique_id   null_values = 0
+-Order(table)         null_values = 0
+-Photo_quality        null_values = 610
+-Product_weight       null_values = 2
+-seller(table)        null_values = 0
+
+
+
+
