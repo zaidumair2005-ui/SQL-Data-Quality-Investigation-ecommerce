@@ -72,11 +72,11 @@ for further data quality validation.
 ### Checking for nulls in every table
 - Customer_id         null_values = 0
 - Orders_id           null_values = 0
--customer_unique_id   null_values = 0
--Order(table)         null_values = 0
--Photo_quality        null_values = 610
--Product_weight       null_values = 2
--seller(table)        null_values = 0
+- customer_unique_id   null_values = 0
+- Order(table)         null_values = 0
+- Photo_quality        null_values = 610
+- Product_weight       null_values = 2
+- seller(table)        null_values = 0
 
 
 
