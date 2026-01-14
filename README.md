@@ -78,6 +78,39 @@ for further data quality validation.
 - Product_weight       null_values = 2
 - seller(table)        null_values = 0
 
+### Duplicate Analysis
+
+Compared total rows vs. distinct business identifiers
+
+Validated that:
+- Customers, Orders, Products, and Sellers contain no invalid duplicates
+- Repeated order items reflect legitimate multi-item purchases
+- Multiple customer records are business-valid due to address or delivery changes
+
+### Relational Integrity Checks
+
+Confirmed:
+
+- One-to-many relationships between customers and orders
+
+- One-to-many relationships between orders and order items
+
+- Proper linkage across product and seller tables
+
+### Review Quality Metrics
+
+- Calculated customer satisfaction percentages using review scores
+
+- Verified rating distributions for analytical consistency
+
+### Key Findings
+
+- No critical data quality issues detected
+
+- All observed repetitions are business-justified
+
+- Dataset is structurally sound and analytics-ready
+
 
 
 
