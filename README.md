@@ -138,9 +138,9 @@ Order Payments → Orders	✓ PASS	0
 Order Reviews → Orders	✓ PASS	0
 Overall Outcome
 
-✅ Zero orphaned records detected
-✅ 100% referential integrity across all tested relationships
-✅ Foreign keys behave exactly as expected in a transactional e-commerce system
+- Zero orphaned records detected
+- 100% referential integrity across all tested relationships
+- Foreign keys behave exactly as expected in a transactional e-commerce system
 
 - Final Assessment
 The database demonstrates excellent referential integrity.
