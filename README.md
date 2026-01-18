@@ -8,7 +8,7 @@
 
 ---
 
-## 📊 Project Overview
+##  Project Overview
 
 **Business Context:**  
 E-commerce platforms depend on accurate data for revenue reporting, inventory management, and customer analytics. This analysis validates the Olist database's structural integrity to ensure it's production-ready for business intelligence and decision-making.
@@ -21,11 +21,10 @@ Systematically assess data quality across 8 interconnected tables using the indu
 
 ---
 
-## 📁 Dataset
+##  Dataset
 
-**Source:** [Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (Olist/Kaggle)  
-**Platform:** Olist — Brazilian marketplace connecting small businesses with customers  
-**Period:** September 2016 - October 2018 (25 months)  
+**Source:** [Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (Kaggle)  
+**Platform:**  Brazilian marketplace connecting small businesses with customers   
 **Geographic Scope:** Brazil (all states)
 
 ### Database Structure
@@ -45,7 +44,7 @@ Systematically assess data quality across 8 interconnected tables using the indu
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 - **Database:** MySQL
 - **SQL Client:** DBeaver
@@ -76,7 +75,7 @@ Confirmed data coverage period (historical dataset, not real-time).
 
 ---
 
-## 📈 Key Findings
+##  Key Findings
 
 ### ✅ **Overall Data Quality: Grade A (98/100)**
 
@@ -107,7 +106,7 @@ Confirmed data coverage period (historical dataset, not real-time).
 
 ---
 
-### 🎯 **Uniqueness: 100% (PASS)**
+###  **Uniqueness: 100% (PASS)**
 
 **No invalid duplicates detected:**
 
@@ -140,7 +139,7 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ---
 
-### 🎯 **Referential Integrity: 100% (PASS)**
+###  **Referential Integrity: 100% (PASS)**
 
 **All foreign key relationships validated (6 critical paths):**
 
@@ -163,7 +162,7 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ---
 
-### 🎯 **Validity: 100% (PASS)**
+### **Validity: 100% (PASS)**
 
 **Financial Integrity:**
 - ✅ Zero invalid prices: All `price` and `freight_value` fields are ≥ 0
@@ -188,7 +187,7 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ---
 
-### 📊 **Additional Business Insights**
+### **Additional Business Insights**
 
 **Customer Satisfaction:**
 - **77% positive reviews** (4-5 stars out of 5)
@@ -211,7 +210,7 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ---
 
-## 💼 Business Impact
+##  Business Impact
 
 ### **What This Means for Operations:**
 
@@ -235,26 +234,26 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ---
 
-## 🎯 Recommendations
+##  Recommendations
 
 ### **Immediate (Week 1):**
-1. ✏️ Add category names for 610 uncategorized products
-2. 📖 Document `customer_id` vs `customer_unique_id` in data dictionary
-3. 🎉 Share findings with stakeholders (celebrate 98% quality!)
+1.  Add category names for 610 uncategorized products
+2.  Document `customer_id` vs `customer_unique_id` in data dictionary
+3.  Share findings with stakeholders (celebrate 98% quality!)
 
 ### **Short-term (Month 1):**
-1. 🤖 Deploy automated daily referential integrity checks
-2. 🔒 Add `FOREIGN KEY` database constraints
-3. 📚 Create comprehensive data dictionary
+1.  Deploy automated daily referential integrity checks
+2.  Add `FOREIGN KEY` database constraints
+3.  Create comprehensive data dictionary
 
 ### **Long-term (Quarter 1):**
-1. 🗂️ Implement soft-delete policy (`is_active` flags)
-2. 📊 Build real-time data quality dashboard (Tableau/Power BI)
-3. 📋 Establish data governance framework with quality SLAs
+1.  Implement soft-delete policy (`is_active` flags)
+2.  Build real-time data quality dashboard (Tableau/Power BI)
+3.  Establish data governance framework with quality SLAs
 
 ---
 
-## 🔬 Technical Skills Demonstrated
+##  Technical Skills Demonstrated
 
 **SQL Techniques:**
 - Aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`)
@@ -281,7 +280,7 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ---
 
-## 📂 Repository Contents
+##  Repository Contents
 ```
 ecommerce-data-quality-project/
 ├── README.md (this file)
@@ -291,7 +290,7 @@ ecommerce-data-quality-project/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. **Download dataset** from [Kaggle - Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 2. **Import CSVs** into MySQL database
@@ -301,24 +300,22 @@ ecommerce-data-quality-project/
 
 ---
 
-## 👤 About This Project
+##  About This Project
 
-**Analyst:** [Your Name]  
-**Date:** January 2025  
+**Analyst:** Zaid Umair  
+**Date:** 18th January 2025  
 **Duration:** 7 days  
 **Status:** ✅ Complete
 
 **Connect:**  
-📧 [your.email@example.com](mailto:your.email@example.com)  
-💼 [LinkedIn Profile](https://linkedin.com/in/yourprofile)  
-🌐 [Portfolio Website](https://yourportfolio.com)
+📧 zaidumair2005@gmail.com  
+💼 https://url-shortener.me/885O  
 
 ---
 
 ## 📝 License
-
 **Dataset:** Brazilian E-Commerce Public Dataset by Olist (CC BY-NC-SA 4.0)  
-**Analysis:** Original work by [Your Name]
+**Analysis:** Original work by Zaid Umair
 
 ---
 
