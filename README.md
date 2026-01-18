@@ -146,6 +146,31 @@ Overall Outcome
 The database demonstrates excellent referential integrity.
 All core relationships are intact, enabling reliable joins across customers, orders, items, products, sellers, payments, and reviews without corrective preprocessing.
 
+### Data Validity Check
+I focused my Data Validity checks on critical columns—those where inaccuracies would directly compromise financial reporting or logistics analysis.
+
+1. Financial Integrity (Price & Freight)
+To protect the accuracy of revenue calculations, I verified that no products were recorded with impossible costs.
+
+Logic: Products must have a positive price, and freight_value cannot be negative.
+
+Impact: Ensures that Gross Revenue and Shipping Cost metrics are not skewed by data entry errors.
+
+2. Temporal Logic (Logistics Lifecycle)
+E-commerce analysis depends heavily on "Time-to-Delivery" metrics. I audited the orders table to ensure the chronological order of events was preserved.
+
+Logic: order_delivered_customer_date must occur after the order_purchase_timestamp.
+
+Impact: Identifies system clock errors or manual entry mistakes that would otherwise produce impossible "negative delivery times" in KPIs.
+
+3. Outlier Detection & Business Context
+I investigated extreme values to distinguish between data errors and regional business practices.
+
+Case Study: The payment_installments column showed a maximum of 24.
+
+Findings: While 24 installments initially appeared to be an outlier, research into the Brazilian market (where Olist operates) confirmed this is a standard consumer credit practice.
+
+Takeaway: This step demonstrates the importance of applying domain knowledge to data before deciding to remove "unusual" values.
 
 
 
