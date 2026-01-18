@@ -53,7 +53,7 @@ Systematically assess data quality across 8 interconnected tables using the indu
 
 ---
 
-## 🔍 Analysis Methodology
+##  Analysis Methodology
 
 ### 1️⃣ **Completeness** (NULL Detection)
 Checked all critical fields for missing values using `COUNT(*)` vs `COUNT(column)`.
@@ -90,7 +90,7 @@ Confirmed data coverage period (historical dataset, not real-time).
 
 ---
 
-### 🎯 **Completeness: 100% (PASS)**
+###  **Completeness: 100% (PASS)**
 
 **Zero NULL values in critical fields:**
 - ✅ All customer IDs, order IDs, product IDs, seller IDs populated
@@ -308,18 +308,18 @@ ecommerce-data-quality-project/
 **Status:** ✅ Complete
 
 **Connect:**  
-📧 zaidumair2005@gmail.com  
-💼 https://url-shortener.me/885O  
+zaidumair2005@gmail.com  
+https://url-shortener.me/885O  
 
 ---
 
-## 📝 License
+##  License
 **Dataset:** Brazilian E-Commerce Public Dataset by Olist (CC BY-NC-SA 4.0)  
 **Analysis:** Original work by Zaid Umair
 
 ---
 
-## 🎓 Key Takeaway
+##  Key Takeaway
 
 **This database demonstrates exceptional data quality (Grade A, 98/100).** Zero critical issues detected. All foreign key relationships intact. Dataset is production-ready for analytics without corrective preprocessing. All observed patterns reflect valid business logic rather than data errors.
 
