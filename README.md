@@ -1,4 +1,4 @@
-# 🛒 E-Commerce Data Quality Analysis
+#  E-Commerce Data Quality Analysis
 
 [![Status](https://img.shields.io/badge/Status-Complete-brightgreen)]()
 [![Grade](https://img.shields.io/badge/Data%20Quality-A%20(98%25)-success)]()
@@ -17,7 +17,7 @@ E-commerce platforms depend on accurate data for revenue reporting, inventory ma
 Systematically assess data quality across 8 interconnected tables using the industry-standard Six Dimensions framework (Completeness, Uniqueness, Consistency, Validity, Accuracy, Timeliness).
 
 **Outcome:**  
-✅ **Database approved for production use** — Zero critical issues, 100% referential integrity, ready for analytics without cleanup.
+ **Database approved for production use** — Zero critical issues, 100% referential integrity, ready for analytics without cleanup.
 
 ---
 
@@ -55,29 +55,29 @@ Systematically assess data quality across 8 interconnected tables using the indu
 
 ##  Analysis Methodology
 
-### 1️⃣ **Completeness** (NULL Detection)
+###  **Completeness** (NULL Detection)
 Checked all critical fields for missing values using `COUNT(*)` vs `COUNT(column)`.
 
-### 2️⃣ **Uniqueness** (Duplicate Detection)  
+###  **Uniqueness** (Duplicate Detection)  
 Compared total rows vs `COUNT(DISTINCT key)` to identify duplicates.
 
-### 3️⃣ **Consistency** (Referential Integrity)  
+###  **Consistency** (Referential Integrity)  
 Validated 6 foreign key relationships using `LEFT JOIN` with orphan detection.
 
-### 4️⃣ **Validity** (Business Rule Validation)  
+###  **Validity** (Business Rule Validation)  
 Applied domain-specific logic (price ranges, date sequences, format compliance).
 
-### 5️⃣ **Accuracy** (Outlier Detection)  
+###  **Accuracy** (Outlier Detection)  
 Investigated extreme values to distinguish errors from valid business behavior.
 
-### 6️⃣ **Timeliness**  
+###  **Timeliness**  
 Confirmed data coverage period (historical dataset, not real-time).
 
 ---
 
 ##  Key Findings
 
-### ✅ **Overall Data Quality: Grade A (98/100)**
+###  **Overall Data Quality: Grade A (98/100)**
 
 | Dimension | Score | Status | Details |
 |-----------|-------|--------|---------|
@@ -93,13 +93,13 @@ Confirmed data coverage period (historical dataset, not real-time).
 ###  **Completeness: 100% (PASS)**
 
 **Zero NULL values in critical fields:**
-- ✅ All customer IDs, order IDs, product IDs, seller IDs populated
-- ✅ All transactional fields (prices, dates, payments) complete
-- ✅ 100% completeness in operational tables
+-  All customer IDs, order IDs, product IDs, seller IDs populated
+-  All transactional fields (prices, dates, payments) complete
+-  100% completeness in operational tables
 
 **Minor gaps (non-critical):**
-- ⚠️ 610 products (1.9%) missing `product_category_name` — acceptable for new inventory
-- ⚠️ 2 products (0.006%) missing `product_weight_g` — negligible impact
+-  610 products (1.9%) missing `product_category_name` — acceptable for new inventory
+-  2 products (0.006%) missing `product_weight_g` — negligible impact
 
 **Business Impact:**  
 ✓ No operational blockers. All fields required for order fulfillment, customer communication, and financial reporting are complete.
@@ -155,35 +155,35 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 **Zero orphaned records across 528,409 child→parent relationships.**
 
 **Business Impact:**
-- ✅ Revenue attribution 100% accurate (no payments without orders)
-- ✅ Customer support can access complete order history
-- ✅ Analytics joins work flawlessly (no broken links)
-- ✅ All transactions traceable to customer, product, and seller
+-  Revenue attribution 100% accurate (no payments without orders)
+-  Customer support can access complete order history
+-  Analytics joins work flawlessly (no broken links)
+-  All transactions traceable to customer, product, and seller
 
 ---
 
 ### **Validity: 100% (PASS)**
 
 **Financial Integrity:**
-- ✅ Zero invalid prices: All `price` and `freight_value` fields are ≥ 0
-- ✅ Impact: Revenue and shipping cost calculations accurate
+-  Zero invalid prices: All `price` and `freight_value` fields are ≥ 0
+- Impact: Revenue and shipping cost calculations accurate
 
 **Temporal Logic:**
-- ✅ Zero chronological errors: All `order_delivered_customer_date` values occur AFTER `order_purchase_timestamp`
-- ✅ Impact: Time-to-delivery KPIs are reliable
+-  Zero chronological errors: All `order_delivered_customer_date` values occur AFTER `order_purchase_timestamp`
+-  Impact: Time-to-delivery KPIs are reliable
 
 **Outlier Investigation:**
-- 🔍 **Payment installments:** Maximum of 24 detected
-- ✅ **Analysis:** Initially flagged, but confirmed as **standard Brazilian consumer credit practice**
-- ✅ **Conclusion:** Valid business behavior, not a data error
+-  **Payment installments:** Maximum of 24 detected
+-  **Analysis:** Initially flagged, but confirmed as **standard Brazilian consumer credit practice**
+-  **Conclusion:** Valid business behavior, not a data error
 
 **Order Status Distribution:**
 | Status | Percentage | Assessment |
 |--------|------------|------------|
-| Delivered | 96.5% | ✅ Healthy |
-| Shipped | 1.1% | ✅ Normal |
-| Canceled | 0.6% | ✅ Low |
-| Processing | 1.8% | ✅ Normal |
+| Delivered | 96.5% |  Healthy |
+| Shipped | 1.1% | Normal |
+| Canceled | 0.6% | Low |
+| Processing | 1.8% |  Normal |
 
 ---
 
@@ -214,16 +214,16 @@ Multiple rows with the same `order_id` in `order_items` represent multi-item pur
 
 ### **What This Means for Operations:**
 
-✅ **Revenue Reporting:** Financial data 100% accurate — no missing payments or invalid prices  
-✅ **Customer Service:** All orders traceable; complete history accessible  
-✅ **Logistics:** Delivery dates validated; time-to-delivery metrics reliable  
-✅ **Seller Management:** All items link to sellers; commissions calculable  
-✅ **Product Analytics:** 99% of products categorized for analysis  
-✅ **Marketing:** Customer segmentation possible using `customer_unique_id`
+ **Revenue Reporting:** Financial data 100% accurate — no missing payments or invalid prices  
+ **Customer Service:** All orders traceable; complete history accessible  
+ **Logistics:** Delivery dates validated; time-to-delivery metrics reliable  
+ **Seller Management:** All items link to sellers; commissions calculable  
+ **Product Analytics:** 99% of products categorized for analysis  
+ **Marketing:** Customer segmentation possible using `customer_unique_id`
 
 ### **Production Readiness:**
 
-**✅ This database is APPROVED for:**
+** This database is APPROVED for:**
 - Business intelligence dashboards
 - Executive reporting
 - Machine learning model training
@@ -305,13 +305,13 @@ ecommerce-data-quality-project/
 **Analyst:** Zaid Umair  
 **Date:** 18th January 2025  
 **Duration:** 7 days  
-**Status:** ✅ Complete
+**Status:**  Complete
 
 **Connect:**  
 zaidumair2005@gmail.com  
 https://url-shortener.me/885O  
 
----
+--
 
 ##  License
 **Dataset:** Brazilian E-Commerce Public Dataset by Olist (CC BY-NC-SA 4.0)  
@@ -323,7 +323,7 @@ https://url-shortener.me/885O
 
 **This database demonstrates exceptional data quality (Grade A, 98/100).** Zero critical issues detected. All foreign key relationships intact. Dataset is production-ready for analytics without corrective preprocessing. All observed patterns reflect valid business logic rather than data errors.
 
-**Status:** ✅ **APPROVED FOR PRODUCTION USE**
+**Status:**  **APPROVED FOR PRODUCTION USE**
 
 ---
 
